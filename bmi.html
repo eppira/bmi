@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://basket.com/wp-content/uploads/2018/07/What-Your-Favorite-Fruit-Says-About-You.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            height: 890px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: black;
+            display: inline-block;
+        }
+        h1{
+            margin-top: 210px;
+            font-family: Batang;
+        }
+        p{
+            font-family: Batang;
+            font-size: 25px;
+        }
+        .container .button{
+            display: inline-block;
+            color: black;
+            padding: 16px 30px;
+            border-radius: 5%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+        input{
+            padding: 25px 50px;
+            text-align: center;
+            border: none;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>KMI SKAIČIUOKLĖ</h1><br>
+    <p>Norint gauti tikslų KMI, ūgis turi būti vedamas pvz.: 1.80</p><br>
+    <input type="text" placeholder="Įveskite savo ūgį" id="height" maxlength="4"><br><br>
+    <input type="text" placeholder="Įveskite savo svorį" id="weight" maxlength="3"><br><br>
+    <input class="button" type="submit" value="Skaičiuoti" onClick="handleClick()"><br><br>
+
+    <div id="output"></div>
+    <script type="text/javascript" language="JavaScript">
+
+        function handleClick() {
+
+            var cm = Number(document.getElementById('height').value);
+            var kg = Number(document.getElementById('weight').value);
+            document.getElementById('output').innerHTML = kg/(cm*cm);
+        }
+    </script>
+</div>
+</body>
+</html>
